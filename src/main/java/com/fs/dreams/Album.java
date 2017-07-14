@@ -7,6 +7,8 @@ public class Album {
 
     private String name;
 
+    private Long artistSrcId;
+
     private Long srcId;
 
     private String type;
@@ -41,6 +43,14 @@ public class Album {
 
     public void setName(String name) {
         this.name = name == null ? null : name.trim();
+    }
+
+    public Long getArtistSrcId() {
+        return artistSrcId;
+    }
+
+    public void setArtistSrcId(Long artistSrcId) {
+        this.artistSrcId = artistSrcId;
     }
 
     public Long getSrcId() {

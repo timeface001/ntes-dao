@@ -7,15 +7,17 @@ public class Song {
 
     private String name;
 
-    private Long artistId;
-
-    private Long albumId;
+    private Long albumSrcId;
 
     private Integer duration;
 
     private Long srcId;
 
     private Long mvId;
+
+    private Integer score;
+
+    private Integer popularity;
 
     private String commentThreadId;
 
@@ -39,20 +41,12 @@ public class Song {
         this.name = name == null ? null : name.trim();
     }
 
-    public Long getArtistId() {
-        return artistId;
+    public Long getAlbumSrcId() {
+        return albumSrcId;
     }
 
-    public void setArtistId(Long artistId) {
-        this.artistId = artistId;
-    }
-
-    public Long getAlbumId() {
-        return albumId;
-    }
-
-    public void setAlbumId(Long albumId) {
-        this.albumId = albumId;
+    public void setAlbumSrcId(Long albumSrcId) {
+        this.albumSrcId = albumSrcId;
     }
 
     public Integer getDuration() {
@@ -77,6 +71,22 @@ public class Song {
 
     public void setMvId(Long mvId) {
         this.mvId = mvId;
+    }
+
+    public Integer getScore() {
+        return score;
+    }
+
+    public void setScore(Integer score) {
+        this.score = score;
+    }
+
+    public Integer getPopularity() {
+        return popularity;
+    }
+
+    public void setPopularity(Integer popularity) {
+        this.popularity = popularity;
     }
 
     public String getCommentThreadId() {

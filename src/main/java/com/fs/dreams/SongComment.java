@@ -5,7 +5,7 @@ import java.util.Date;
 public class SongComment {
     private Long id;
 
-    private Long songId;
+    private Long songSrcId;
 
     private Long srcId;
 
@@ -31,12 +31,12 @@ public class SongComment {
         this.id = id;
     }
 
-    public Long getSongId() {
-        return songId;
+    public Long getSongSrcId() {
+        return songSrcId;
     }
 
-    public void setSongId(Long songId) {
-        this.songId = songId;
+    public void setSongSrcId(Long songSrcId) {
+        this.songSrcId = songSrcId;
     }
 
     public Long getSrcId() {

@@ -9,6 +9,12 @@ public class Artist {
 
     private String name;
 
+    private String alias;
+
+    private Integer musicSize;
+
+    private Integer albumSize;
+
     private String avatar;
 
     private Date createTime;
@@ -35,6 +41,30 @@ public class Artist {
 
     public void setName(String name) {
         this.name = name == null ? null : name.trim();
+    }
+
+    public String getAlias() {
+        return alias;
+    }
+
+    public void setAlias(String alias) {
+        this.alias = alias == null ? null : alias.trim();
+    }
+
+    public Integer getMusicSize() {
+        return musicSize;
+    }
+
+    public void setMusicSize(Integer musicSize) {
+        this.musicSize = musicSize;
+    }
+
+    public Integer getAlbumSize() {
+        return albumSize;
+    }
+
+    public void setAlbumSize(Integer albumSize) {
+        this.albumSize = albumSize;
     }
 
     public String getAvatar() {
