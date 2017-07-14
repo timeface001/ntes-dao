@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fs.dreams.mapper.SongArtistRelationMapper">
+  <resultMap id="BaseResultMap" type="com.fs.dreams.SongArtistRelationKey">
+    <id column="song_src_id" jdbcType="BIGINT" property="songSrcId" />
+    <id column="artist_src_id" jdbcType="BIGINT" property="artistSrcId" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="com.fs.dreams.SongArtistRelationKey">
+    delete from song_artist_relation
+    where song_src_id = #{songSrcId,jdbcType=BIGINT}
+      and artist_src_id = #{artistSrcId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.fs.dreams.SongArtistRelationKey">
+    insert into song_artist_relation (song_src_id, artist_src_id)
+    values (#{songSrcId,jdbcType=BIGINT}, #{artistSrcId,jdbcType=BIGINT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.fs.dreams.SongArtistRelationKey">
+    insert into song_artist_relation
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="songSrcId != null">
+        song_src_id,
+      </if>
+      <if test="artistSrcId != null">
+        artist_src_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="songSrcId != null">
+        #{songSrcId,jdbcType=BIGINT},
+      </if>
+      <if test="artistSrcId != null">
+        #{artistSrcId,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+</mapper>
