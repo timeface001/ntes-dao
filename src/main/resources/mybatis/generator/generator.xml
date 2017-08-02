@@ -63,6 +63,5 @@
             <!--         <ignoreColumn column="FRED" /> -->
             <!-- 指定列的java数据类型 -->
             <!--          <columnOverride column="LONG_VARCHAR_FIELD" jdbcType="VARCHAR" /> -->
-
     </context>
 </generatorConfiguration>
