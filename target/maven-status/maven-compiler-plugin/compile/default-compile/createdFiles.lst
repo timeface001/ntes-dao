@@ -1,8 +1,0 @@
-com\fs\dreams\SongComment.class
-com\fs\dreams\mapper\AlbumMapper.class
-com\fs\dreams\mapper\SongMapper.class
-com\fs\dreams\Album.class
-com\fs\dreams\mapper\ArtistMapper.class
-com\fs\dreams\Artist.class
-com\fs\dreams\Song.class
-com\fs\dreams\mapper\SongCommentMapper.class
